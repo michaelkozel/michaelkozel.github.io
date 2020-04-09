@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+    flex-direction: column;
+	background: #3e3e3e;
+    min-height: 80vh;    
+	font-family: 'Poppins';
+	overflow-x: hidden;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.button-social {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+.button-social img{
+    width: 10vh;
+    height: auto;
+}
+@keyframes fadeIn {
+	to {
+		background: rgba(0, 0, 0, 0.8);
+	}
+}
+/* Desktop view */
+.navbar {
+	width: 100%;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 30px;
+	box-sizing: border-box;
+}
+.icon,
+.close-btn {
+	display: none;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+.links {
+	display: flex;
+	list-style: none;
+}
+.links li {
+	margin-right: 24px;
+}
+.links li a {
+	text-decoration: none;
+	color: #575757;
+	letter-spacing: -0.5px;
+}
+.links li a:hover {
+	color: #000;
+}
+.backdrop {
+	display: none;
+	animation: 0.4s ease-in-out fadeIn forwards;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+.landing {
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 85vh;
+}
+.cover-image {
+	width: 100%;
+	max-width: 800px;
+	height: auto;
+}
+.siteTitle {
+	font-size: 5em;
+	margin-bottom: 16px;
+}
+.siteDescription {
+	font-size: 2em;
+}
+.buttons {
+    margin-top: 32px;
+}
+.meetMeBtn,
+.contactBtn {
+	text-decoration: none;
+	background: #6d63fd;
+	color: white;
+	padding: 8px 25px;
+	border-radius: 5px;
+	font-weight: 400;
+	font-size: 1em;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	transition: all 0.3s ease-in-out;
+	outline: 0;
+}
+.meetMeBtn:hover,
+.contactBtn:hover {
+	cursor: pointer;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+}
+.contactBtn {
+	background: rgb(187, 187, 187);
+	color: black;
+	margin-left: 20px;
+}
+footer{ 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 8vh;
+    flex:0;
+   color:whitesmoke;
+background-color: black;
+ }
+ footer p{
+    display: flex;
+    justify-content: center;  
+    font-size: small;
+ }
+/* Smaller Desktop */
+@media (max-width: 1140px) {
+	.landing {
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 30px;
+	}
+	.landing-left {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+}
+
+/* Tablet */
+@media (max-width: 600px) {
+	.siteTitle {
+		font-size: 4em;
+	}
+	.siteDescription {
+		font-size: 1.5em;
+	}
+	.meetMeBtn,
+	.contactBtn {
+		font-size: 1em;
+	}
+}
+
+/* Mobile view */
+@media (max-width: 675px) {
+	.icon,
+	.close-btn {
+		display: block;
+	}
+	.icon {
+		position: absolute;
+		right: 24px;
+	}
+	.links {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 90%;
+		right: -90%;
+		background: #fff;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		z-index: 2;
+		transition: 0.3s ease-in-out;
+	}
+	.links li {
+		margin-right: 0;
+		margin-bottom: 50px;
+		font-size: 1.5em;
+    }
+    
+	.siteTitle {
+		font-size: 3em;
+		margin-bottom: 8px;
+	}
+	.siteDescription {
+		font-size: 1.2em;
+	}
+	.meetMeBtn,
+	.contactBtn {
+		font-size: 0.9em;
+	}
+
+	.close-btn {
+		position: absolute;
+		top: 24px;
+		right: -90vh;
+		color: #575757;
+		font-size: 2em;
+		z-index: 3;
+		transition: 0.3s ease-in-out;
+	}
+	.close-btn:hover {
+		color: #000;
+		cursor: pointer;
+	}
+	/* Open class */
+	.open .links {
+		right: 0;
+	}
+	.open .close-btn {
+		right: 32px;
+	}
+	.open .backdrop {
+		display: block;
+	}
+}
