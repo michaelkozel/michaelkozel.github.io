@@ -10,6 +10,10 @@ body {
 	font-family: 'Poppins';
 	overflow-x: hidden;
 }
+.name{color:#3EB650;
+margin: 2vh;}
+.surname{color:#FCC133;
+	margin: 2vh;}
 .buttons{
     display: flex;
     justify-content: space-between;
@@ -90,6 +94,7 @@ body {
 	margin-bottom: 16px;
 }
 .siteDescription {
+	color:#1570d1;
 	font-size: 2em;
 }
 .buttons {
